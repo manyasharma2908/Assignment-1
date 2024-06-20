@@ -3,16 +3,16 @@ class Solution {
     int r=0;
     int sum=0;
     int temp=x;
-    while(x>0){
-        r=x%10;
+    while(temp>0){
+        r=temp%10;
         sum=sum*10+r;
-        x/=10;
-        }
-    if(temp==sum){
+        temp/=10;
+    }
+    if(x==sum){
         return true;
     }
     else{
         return false;
     }
-}
+  }
 }
