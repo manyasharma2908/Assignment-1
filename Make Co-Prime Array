@@ -1,0 +1,28 @@
+class Solution{
+    int countCoPrime(int a[], int n)
+    {
+        // Complete the function
+        int insertion=0;
+        if(n<2){
+            return 0;
+        }
+        for(int i=0;i<n-1;i++){
+            int curr_gcd=gcd(a[i],a[i+1]);
+            if(curr_gcd>1){
+               insertion++;
+            }
+        }
+         return insertion;
+         }
+    public static int gcd(int a,int b){
+      while(a>0 && b>0){
+        if(a>b){
+            a=a%b;
+     }
+        else{
+            b=b%a;
+     }
+    }
+    return a+b;
+    }
+}
